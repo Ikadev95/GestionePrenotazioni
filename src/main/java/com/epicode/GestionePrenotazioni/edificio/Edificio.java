@@ -3,13 +3,13 @@ package com.epicode.GestionePrenotazioni.edificio;
 import com.epicode.GestionePrenotazioni.postazione.Postazione;
 import jakarta.persistence.*;
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.ToString;
 
+
+import java.util.ArrayList;
 import java.util.List;
 
-@Getter
-@Setter
+
 @Entity
 @Data
 @Table(name = "edifici")
@@ -22,6 +22,7 @@ public class Edificio {
     private String indirizzo;
     private String citta;
 
-    @OneToMany(mappedBy = "edificio", cascade = CascadeType.ALL)
-    private List<Postazione> postazioni;
+    @OneToMany(mappedBy = "edificio", cascade = CascadeType.PERSIST)
+    @ToString.Exclude
+    private List<Postazione> postazioni = new ArrayList<>();
 }

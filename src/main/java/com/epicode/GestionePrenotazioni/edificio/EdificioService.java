@@ -12,19 +12,19 @@ import java.util.List;
 @Service
 public class EdificioService {
 
-    private EdificioRepo edificioRepo;
-    private PostazioneRepo postazioneRepo;
+    private final EdificioRepo edificioRepo;
+    private final PostazioneRepo postazioneRepo;
 
     @Transactional
     public void salvaEdificioEPostazione(Edificio e, List<Postazione> p){
-        if(p != null && !p.isEmpty()) {
+
+        edificioRepo.save(e);
             for (int i = 0; i < p.size(); i++) {
                 p.get(i).setEdificio(e);
-                postazioneRepo.save(p.get(i));
             }
-            e.setPostazioni(p);
-            edificioRepo.save(e);
-        }
+           e.setPostazioni(p);
+
+
     }
 
 }
