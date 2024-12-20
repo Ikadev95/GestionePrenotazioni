@@ -27,7 +27,9 @@ public class PrenotazioneService {
             throw new IllegalArgumentException("non puoi prenotare più di una postazione per questa data");
         } else if (numeroPrenotazioni  >= p.getNumeroTotaleOccupanti()) {
             throw new IllegalArgumentException("la postazione ha raggiunto il numero massimo di prenotazioni per la data scelta");
-        } else {
+        } else if (data.isBefore(LocalDate.now())) {
+          throw  new IllegalArgumentException("non puoi inserire una data inferiore a quella di oggi");
+      } else {
             Prenotazione prenotazione = new Prenotazione();
             prenotazione.setDataPrenotazione(data);
             prenotazione.setPostazione(p);
