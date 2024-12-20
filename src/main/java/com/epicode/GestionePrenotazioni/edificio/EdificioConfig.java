@@ -11,7 +11,7 @@ public class EdificioConfig {
         Edificio edificio = new Edificio();
         edificio.setNome("Edificio A");
         edificio.setIndirizzo("Via Roma 123");
-        edificio.setCitta("Milano");
+        edificio.setCitta("milano");
         return edificio;
     }
 
@@ -20,7 +20,7 @@ public class EdificioConfig {
         Edificio edificio = new Edificio();
         edificio.setNome("Edificio B");
         edificio.setIndirizzo("Corso Vittorio 456");
-        edificio.setCitta("Torino");
+        edificio.setCitta("torino");
         return edificio;
     }
 

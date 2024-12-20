@@ -34,4 +34,9 @@ public class Postazione {
     @OneToMany(mappedBy = "postazione", cascade = CascadeType.ALL)
     @ToString.Exclude
     private List<Prenotazione> prenotazioni = new ArrayList<>();
+
+    public String stampa(){
+        String s = "codice: " + this.codice + " tipo: " +  this.tipoPostazione + " edificio: " + this.edificio.getNome() + " città: " + edificio.getCitta() ;
+        return s;
+    }
 }
