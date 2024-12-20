@@ -21,5 +21,9 @@ public class Utente {
     @OneToMany(mappedBy = "utente", cascade = CascadeType.ALL)
     List<Prenotazione> prenotazioni;
 
+    public String stampa(){
+        String s = "id:"+ this.id +" username: " + this.username + " mail: " + this.email;
+        return s;
+    }
 
 }
