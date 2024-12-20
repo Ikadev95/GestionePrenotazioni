@@ -103,8 +103,11 @@ public class AppRunner implements ApplicationRunner {
         LocalDate data = LocalDate.parse(scanner.next());
 
 
-        Prenotazione prenotazioneEffettuata = prenotazioneService.creaPrenotazione(data,utenteScelto,postazioneScelta);
-        System.out.println(prenotazioneEffettuata);
+        Prenotazione prenotazioneEffettuata = prenotazioneService.creaPrenotazione(data, utenteScelto, postazioneScelta);
+        System.out.println("Prenotazione creata: ID = " + prenotazioneEffettuata.getId() +
+                ", Utente = " + prenotazioneEffettuata.getUtente().getUsername() +
+                ", Postazione = " + prenotazioneEffettuata.getPostazione().getCodice() +
+                ", Data = " + prenotazioneEffettuata.getDataPrenotazione());
     }
 
 }
