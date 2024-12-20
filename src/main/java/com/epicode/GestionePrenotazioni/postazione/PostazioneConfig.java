@@ -15,6 +15,7 @@ public class PostazioneConfig {
         postazione.setCodice("P001");
         postazione.setDescrizione("Postazione privata al piano 1");
         postazione.setTipoPostazione(TipoPostazione.PRIVATO);
+        postazione.setNumeroTotaleOccupanti(4);
         return postazione;
     }
 
@@ -24,6 +25,7 @@ public class PostazioneConfig {
         postazione.setCodice("P002");
         postazione.setDescrizione("Postazione open space piano 2");
         postazione.setTipoPostazione(TipoPostazione.OPENSPACE);
+        postazione.setNumeroTotaleOccupanti(12);
         return postazione;
     }
 
@@ -33,6 +35,7 @@ public class PostazioneConfig {
         postazione.setCodice("P003");
         postazione.setDescrizione("Sala riunioni piano 3");
         postazione.setTipoPostazione(TipoPostazione.SALA_RIUNIONI);
+        postazione.setNumeroTotaleOccupanti(2);
         return postazione;
     }
 }

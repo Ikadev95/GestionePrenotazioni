@@ -38,6 +38,6 @@ public class EdificioRunner implements ApplicationRunner {
 
 
         edificioService.salvaEdificioEPostazione(edificio1, Arrays.asList(postazione1, postazione2));
-       /* edificioService.salvaEdificioEPostazione(edificio2, Arrays.asList(postazione3));*/
+       edificioService.salvaEdificioEPostazione(edificio2, Arrays.asList(postazione3));
     }
 }
